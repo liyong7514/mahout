@@ -22,6 +22,7 @@
     <module>core</module>
     <module>taste-web</module>
     <module>examples</module>
+      <module>liyong-mahout</module>
   </modules>
 
   <build>
