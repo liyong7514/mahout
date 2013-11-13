@@ -150,13 +150,17 @@ abstract class AbstractSimilarity implements UserSimilarity, ItemSimilarity {
       throw new IllegalArgumentException("user1 or user2 is null");
     }
 
+    //需要给哪个用户推荐:
     Preference[] xPrefs = user1.getPreferencesAsArray();
+
+    //循环比较的用户:
     Preference[] yPrefs = user2.getPreferencesAsArray();
 
     if (xPrefs.length == 0 || yPrefs.length == 0) {
       return Double.NaN;
     }
 
+      //取第一个
     Preference xPref = xPrefs[0];
     Preference yPref = yPrefs[0];
     Item xIndex = xPref.getItem();
